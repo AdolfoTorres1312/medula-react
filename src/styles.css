@@ -133,3 +133,39 @@ footer .logos img{
 }
 
 .menu-pop{ width:86vw; max-width:340px; }
+/* --- FIX móviles: títulos y descripciones dentro de las tarjetas --- */
+.feature {
+  padding: 18px 16px;              /* un poco menos de padding en mobile */
+}
+
+.feature-icon img{
+  width: 40px; height: 40px;       /* icono apenas más pequeño en mobile */
+}
+
+/* Permite cortes y guiones automáticos en palabras largas (ej: Recordatorios) */
+.feature-title,
+.feature-desc {
+  line-height: 1.25;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+  hyphens: auto;
+}
+
+/* Ajuste de tamaños responsivos más conservadores */
+.feature-title{
+  font-size: clamp(0.95rem, 0.80rem + 1.0vw, 1.15rem);
+  font-weight: 900;                 /* deja fuerte pero no tan extremo */
+}
+
+.feature-desc{
+  font-size: clamp(0.92rem, 0.84rem + 0.6vw, 1.05rem);
+  font-weight: 700;
+  margin-top: 2px;
+}
+
+/* En pantallas muy pequeñas, baja un poco más */
+@media (max-width: 360px){
+  .feature { padding: 16px 14px; }
+  .feature-title{ font-size: 1rem; }
+  .feature-desc{ font-size: 0.95rem; }
+}
