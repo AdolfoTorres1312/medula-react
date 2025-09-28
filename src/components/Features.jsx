@@ -2,14 +2,17 @@ import { useLang } from '../context/LangContext'
 
 export default function Features() {
   const { t } = useLang()
+  const B = import.meta.env.BASE_URL // '/medula-react/' en Pages, '/' en dev
+
   return (
     <section className="py-4 py-lg-5">
       <div className="container-xl">
         <div className="row g-3 g-lg-4 justify-content-center">
+
           <div className="col-6 col-md-6 col-lg-3">
             <article className="feature h-100 text-center">
               <div className="feature-icon">
-                <img src={import.meta.env.BASE_URL + 'public/historial.svg'} alt="" />
+                <img src={B + 'historial.svg'} alt="" />
               </div>
               <h3 className="feature-title">{t('feat_hist_title').text}</h3>
               <p className="feature-desc">{t('feat_hist_desc').text}</p>
@@ -19,7 +22,7 @@ export default function Features() {
           <div className="col-6 col-md-6 col-lg-3">
             <article className="feature h-100 text-center">
               <div className="feature-icon">
-                <img src={import.meta.env.BASE_URL + 'public/medicamentos.svg'} alt="" />
+                <img src={B + 'medicamentos.svg'} alt="" />
               </div>
               <h3 className="feature-title">{t('feat_med_title').text}</h3>
               <p className="feature-desc">{t('feat_med_desc').text}</p>
@@ -29,7 +32,7 @@ export default function Features() {
           <div className="col-6 col-md-6 col-lg-3">
             <article className="feature h-100 text-center">
               <div className="feature-icon">
-                <img src={import.meta.env.BASE_URL + 'public/examenes.svg'} alt="" />
+                <img src={B + 'examenes.svg'} alt="" />
               </div>
               <h3 className="feature-title">{t('feat_lab_title').text}</h3>
               <p className="feature-desc">{t('feat_lab_desc').text}</p>
@@ -39,12 +42,13 @@ export default function Features() {
           <div className="col-6 col-md-6 col-lg-3">
             <article className="feature h-100 text-center">
               <div className="feature-icon">
-                <img src={import.meta.env.BASE_URL + 'public/calendario.svg'} alt="" />
+                <img src={B + 'calendario.svg'} alt="" />
               </div>
               <h3 className="feature-title">{t('feat_rem_title').text}</h3>
               <p className="feature-desc">{t('feat_rem_desc').text}</p>
             </article>
           </div>
+
         </div>
       </div>
     </section>
